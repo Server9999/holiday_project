@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Holiday-project</title>
 </head>
@@ -79,8 +80,36 @@
                     </div>
                 </div>
             </section>
+            <section class="program-container">
+                <header class="program__header">
+                    [программа курса]
+                </header>
+                <ul class="program-course__list course-content" />
+            </section>
         </main>
     </div>
+    <template id="program-course-template">
+        {{#each lessons}}
+        <li class="course-content__item">
+            <article class="course-content__item-container">
+                <h5 class="course-content__item-header">{{header}}</h5>
+                {{#each description}}
+                <p class="course-content__item-content">{{this}} </p>
+                {{/each}}
+            </article>
+            <article class="course-content__hometask-container">
+                <header>
+                    <h6 class="course-content__item-hometask">домашнее задание</h6>
+                </header>
+                {{#each hometask}}
+                <p class="course-content__item-content">{{this}} </p>
+                {{/each}}
+            </article>
+        </li>
+        {{/each}}
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -148,7 +148,6 @@
         min-width: 300px;
         padding: 20px 10px;
     }
-
     .flow-logo {
         display: none;
     }
@@ -306,4 +305,129 @@
     .arrow-next {
         right: -45px;
     }
+}
+
+/* Course Program section */
+
+.program__header {
+    background-color: #000;
+    display: inline-block;
+    font-size: 3.4725rem;
+    font-family: "Ubuntu";
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.17;
+    margin-bottom: 3.5975rem;
+}
+
+.program__header::first-letter {
+    text-transform: uppercase;
+}
+
+.course-content {
+    counter-reset: lessons;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-content__item {
+    counter-increment: lessons 1;
+    margin-bottom: 2.1125rem;
+    flex: 0 0 29%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-content__item>.course-content__item-container:before {
+    content: counter(lessons)'.';
+    font-size: 1.9825rem;
+    font-family: "Ubuntu";
+    font-weight: bolder;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.135;
+    position: absolute;
+    left: -1.5%;
+}
+
+.course-content__item:nth-child(-n+9)>.course-content__item-container:before {
+    content: 'O'counter(lessons)'.';
+    font-size: 1.9825rem;
+    font-family: "Ubuntu";
+    font-weight: bolder;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.135;
+    position: absolute;
+    left: -0.7rem;
+}
+
+.course-content__item-header {
+    font-size: 1.25rem;
+    font-family: "Ubuntu";
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.433;
+    overflow: hidden;
+    margin-bottom: 1.1575rem;
+}
+
+.course-content__item::before {
+    content: "";
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: #f26228;
+    top: 2.75rem;
+    position: absolute;
+    left: 1.9rem;
+}
+
+.course-content__item:nth-of-type(-n+9):before {
+    content: "";
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: #f26228;
+    top: 2.75rem;
+    position: absolute;
+    left: 2rem;
+}
+
+.course-content__item-container {
+    padding-left: 4.42rem;
+    flex: 0 0 50%
+}
+
+.course-content__hometask-container {
+    padding-left: 4.42rem;
+    flex: 0 0 50%
+}
+
+.course-content__item-content {
+    font-size: 1.0415625rem;
+    font-family: "PT+Sans";
+    color: #3f4144;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 1.3125rem;
+}
+
+.course-content__item-hometask {
+    display: inline-block;
+    font-size: 1.0415625rem;
+    font-family: "Ubuntu";
+    color: #fff;
+    line-height: 1.4;
+    background-color: #f26228;
+    padding-left: 0.250rem;
+    padding-right: 0.250rem;
+    margin-bottom: 0.7475rem;
+}
+
+.course-content__item-hometask::first-letter {
+    text-transform: uppercase;
 }
