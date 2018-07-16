@@ -7,7 +7,7 @@
 
 @media (min-width: 1200px) {
     .wrapper {
-        min-width: 848px;
+        width: 848px;
         margin: 0 auto;
     }
 }
