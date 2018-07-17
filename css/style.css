@@ -331,8 +331,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Ubuntu', sans-serif;
- 
 }
 
 .after-course__tittle {
@@ -406,10 +404,6 @@
 
 /* Requirements section*/
 
-.requirements {
-  font-family: "Ubuntu", sans-serif;
-}
-
 .requirements__tittle {
   max-width: 450px;
   margin-bottom: 36px;
@@ -454,7 +448,6 @@
   content: attr(data-title);
   display: flex;
   position: absolute;
-  font-family: "Ubuntu", sans-serif;
   font-size: 0.833rem;
   line-height: 1.6;
   font-weight: 700;
