@@ -311,9 +311,8 @@
 
 .after-сourse,
 .requirements {
-  padding: 0 10px 0 10px;
+  /* padding: 0 10px 0 10px; */
   min-width: 320px;
-  max-width: 848px;
   margin: 0 auto;
 }
 
@@ -335,7 +334,7 @@
 
 .after-course__tittle {
   margin: 0;
-  max-width: 270px;
+  max-width: 255px;
   margin-bottom: 36px;
 }
 
@@ -371,35 +370,38 @@
 }
 
 @media (min-width: 1200px) {
-    .after-сourse,
-    .requirements {
-      width: 848px;
-      margin: 0 auto;
+  .after-сourse,
+  .requirements {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .after-сourse {
+    justify-content: flex-start;
+  }
+  
+  .after-course__tittle {
+    align-self: flex-start;
+  }
+  
+  .after-course__img {
+    /* order: 1; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0;
     }
   
-    .after-сourse {
-      flex-wrap: wrap;
-      margin-bottom: 75px;
-      height: 500px;
-      justify-content: flex-start;
-    }
+  .after-сourse__wrapper {
+    padding-top: 40px;
+  }
   
-    .after-course__tittle {
-      align-self: flex-start;
-    }
-  
-    .after-course__img {
-      order: 1;
-      margin-bottom: 0;
-    }
-  
-    .after-сourse__wrapper {
-      padding-top: 40px;
-    }
-  
-    .after-course__text {
-      width: 45%;
-    }
+  .after-course__text {
+    width: 45%;
+    margin: 0;
+    padding-bottom: 268px;
+  }
 }
 
 /* Requirements section*/
@@ -469,23 +471,31 @@
     align-items: flex-start;
   }
 
-.requirements__list {
-    box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.1);
-    min-height: 297px;
-    width: 56%;
-}
-
-.requirements__item {
+  .requirements__list {
+      min-height: 297px;
+      width: 56%;
+    }
+    
+  .requirements__item {
     position: absolute;
     top: 0;
-    margin-bottom: 0;
+    box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 58px 15px 0 15px;
+    margin-bottom: 0;
     opacity: 0;
+  }
+
+  .requirements__item:not(:last-of-type) {
+    margin-bottom: 0;
   }
 
   .requirements__img {
     margin-right: 60px;
     margin-bottom: 0;
+  }
+
+  .requirements__text {
+    padding-bottom: 10px;
   }
 
   .requirements__arrow {
