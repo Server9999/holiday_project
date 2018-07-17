@@ -307,6 +307,245 @@
     }
 }
 
+/* After course section */
+
+.after-сourse,
+.requirements {
+  padding: 0 10px 0 10px;
+  min-width: 320px;
+  max-width: 848px;
+  margin: 0 auto;
+}
+
+.after-course__tittle,
+.requirements__tittle {
+  font-size: 2.3rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.after-сourse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 55px;
+}
+
+.after-course__tittle {
+  margin: 0;
+  max-width: 270px;
+  margin-bottom: 36px;
+}
+
+.after-course__tittle--bg-black {
+  background-color: black;
+  color: white;
+}
+
+.after-course__img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 36px;
+}
+
+.after-course__text {
+  padding-left: 74px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.06rem;
+  line-height: 1.5;
+}
+
+.after-course__text--after::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: black;
+  width: 56px;
+  height: 8px;
+  top: 0px;
+  left: 0px;
+}
+
+.requirements {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.requirements__tittle {
+  max-width: 450px;
+  margin-bottom: 36px;
+}
+
+.requirements__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.requirements__list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.requirements__item:not(:last-of-type) {
+  margin-bottom: 36px;
+}
+
+.requirements__item-wrapper {
+  position: relative;
+}
+
+.requirements__img {
+  margin-bottom: 36px;
+}
+
+.requirements__text {
+  margin: 0;
+  padding-left: 50px;
+  font-weight: 400;
+  font-size: 1.06rem;
+  line-height: 1.5;
+}
+
+.requirements__text::after {
+  content: attr(data-title);
+  display: flex;
+  position: absolute;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.833rem;
+  line-height: 1.6;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background-color: #ef7330;
+  color: white;
+  width: 48px;
+  height: 16px;
+  top: 17px;
+  left: -16px;
+}
+
+@media (min-width: 1199px) {
+  .requirements__arrow {
+    position: absolute;
+    top: 84px;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .requirements__arrow-prev {
+    background-image: url("../img/icon/prev.svg");
+    left: -35px;
+  }
+
+  .requirements__arrow-next {
+    background-image: url("../img/icon/next.svg");
+    right: -35px;
+  }
+
+  [id^="target-item"] {
+    display: none;
+  }
+
+  .item-1 {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  *:target ~ .item-1 {
+    opacity: 0;
+  }
+
+  #target-item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+  #target-item-2:target ~ .item-2,
+  #target-item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .after-сourse,
+  .requirements {
+    width: 848px;
+    margin: 0 auto;
+  }
+
+  .after-сourse {
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+    height: 500px;
+    justify-content: flex-start;
+  }
+
+  .after-course__tittle {
+    align-self: flex-start;
+  }
+
+  .after-course__img {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .after-сourse__wrapper {
+    padding-top: 40px;
+  }
+
+  .after-course__text {
+    width: 45%;
+  }
+
+  .requirements {
+    margin-bottom: 26px;
+  }
+
+  .requirements__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .requirements__list {
+    width: 56%;
+    box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.1);
+    min-height: 297px;
+  }
+
+  .requirements__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .requirements__item {
+    position: absolute;
+    top: 0;
+    padding: 58px 15px 0 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .requirements__img {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+}
+
 /* Course Program section */
 
 .program__header {
