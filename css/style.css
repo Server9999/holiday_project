@@ -332,7 +332,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Ubuntu', sans-serif;
-  margin-bottom: 55px;
+ 
 }
 
 .after-course__tittle {
@@ -358,6 +358,7 @@
   position: relative;
   font-size: 1.06rem;
   line-height: 1.5;
+  padding-bottom: 55px;
 }
 
 .after-course__text--after::after {
@@ -419,6 +420,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 55px;
 }
 
 .requirements__list {
@@ -469,11 +471,7 @@
 }
 
 @media (min-width: 1200px) {
-  .requirements {
-    margin-bottom: 26px;
-  }
-
-  .requirements__wrapper {
+    .requirements__wrapper {
     flex-direction: row;
     align-items: flex-start;
   }
