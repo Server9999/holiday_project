@@ -671,7 +671,7 @@
 
 .course-content__item-container {
     padding-left: 4.42rem;
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     margin-bottom: 1rem;
 }
 
@@ -681,7 +681,7 @@
 
 .course-content__hometask-container {
     padding-left: 4.42rem;
-    flex: 0 0 50%
+    /* flex: 1 1 50%; */
 }
 
 .course-content__item-content {
