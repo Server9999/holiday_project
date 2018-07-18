@@ -564,7 +564,6 @@
 
 @media (min-width: 1200px) {
     .course-content {
-        counter-reset: lessons;
         display: flex;
         flex-wrap: wrap;
     }
@@ -582,6 +581,9 @@
     }
 }
 
+.course-content {
+    counter-reset: lessons;
+}
 .program__header {
     background-color: #000;
     display: inline-block;
