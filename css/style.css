@@ -389,6 +389,10 @@
 
 /* Requirements section*/
 
+.requirements {
+    padding-bottom: 80px;
+}
+
 .requirements__tittle {
     max-width: 450px;
     margin-bottom: 36px;
@@ -399,7 +403,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 162px;
 }
 
 .requirements__list {
@@ -503,6 +506,9 @@
 }
 
 @media (min-width: 1200px) {
+    .requirements {
+        padding-bottom: 154px;
+    }
     .requirements__wrapper {
         flex-direction: row;
         align-items: flex-start;
@@ -545,7 +551,7 @@
 /* Course Program section */
 
 .program-container {
-    padding-top: 6.25rem;
+    padding-bottom: 50px;
     position: relative;
 }
 
@@ -558,37 +564,18 @@
     text-transform: uppercase;
     transform: rotate(90deg);
     transform-origin: top left;
-    top: -2.5%;
+    top: -8.1%;
     left: 105%;
     display: none;
-}
-
-@media (min-width: 1200px) {
-    .course-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .course-content__item {
-        margin-right: 1rem;
-    }
-    .course-content__item:nth-of-type(3n) {
-        margin-right: 0;
-    }
-    .course-content__item:nth-last-child(-n+2) {
-        margin-bottom: 0;
-    }
-    .background-container{
-        display: block;
-    }
 }
 
 .course-content {
     counter-reset: lessons;
 }
+
 .program__header {
     background-color: #000;
-    display: inline-block;
-    font-size: 3.4725rem;
+    font-size: 2.4725rem;
     letter-spacing: 3px;
     font-family: "Ubuntu";
     color: #fff;
@@ -712,6 +699,30 @@
     text-transform: uppercase;
 }
 
+
+@media (min-width: 1200px) {
+    .course-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .course-content__item {
+        margin-right: 1rem;
+    }
+    .course-content__item:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .course-content__item:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+    .background-container{
+        display: block;
+    }
+    .program__header {
+        display: inline-block;
+        font-size: 3.4725rem;
+    }
+}
+
 /* Footer */
 
 .footer {
@@ -719,7 +730,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 134px;
+    padding-bottom: 40px;
 }
 
 .footer_wrapper {
@@ -823,6 +834,11 @@
 }
 
 @media (min-width: 1200px) {
+
+    .footer {
+        padding-bottom: 134px;
+    }
+    
     .footer__item {
         font-size: 0.78rem;
         margin-bottom: 22px;
