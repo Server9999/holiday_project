@@ -831,6 +831,7 @@
     text-transform: uppercase;
     line-height: 1.253;
     text-align: center;
+    cursor: pointer;
 }
 
 @media (min-width: 1200px) {
