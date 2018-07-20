@@ -19,6 +19,8 @@
 
 .contact {
     font-weight: 500;
+    color: #000000;
+    text-decoration: none;
     display: flex;
 }
 
